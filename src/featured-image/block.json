@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "plain-blocks/featured-image",
+	"version": "0.1.0",
+	"title": "Hero (Featured Image)",
+	"category": "plain-blocks",
+	"description": "Display a post's featured image as background image.",
+	"textdomain": "plain-blocks",
+	"attributes": {
+		"focalPoint": {
+			"type": "object"
+		},
+		"sizeSlug": {
+			"type": "string"
+		}
+	},
+	"usesContext": [ "postId", "postType", "queryId" ],
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

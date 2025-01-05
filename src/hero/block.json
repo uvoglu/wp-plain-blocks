@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "plain-blocks/hero",
+	"version": "0.1.0",
+	"title": "Hero",
+	"category": "plain-blocks",
+	"description": "Display an image or video as a background object.",
+	"textdomain": "plain-blocks",
+	"attributes": {
+		"alt": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundType": {
+			"type": "string",
+			"default": "image"
+		},
+		"id": {
+			"type": "number"
+		},
+		"focalPoint": {
+			"type": "object"
+		},
+		"sizeSlug": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		}
+	},
+	"usesContext": [],
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
