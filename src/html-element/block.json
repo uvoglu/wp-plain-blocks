@@ -28,6 +28,9 @@
 			"source": "attribute",
 			"attribute": "class",
 			"selector": "*"
+		},
+		"dataset": {
+			"type": "string"
 		}
 	},
 	"editorScript": "file:./index.js",

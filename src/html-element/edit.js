@@ -7,6 +7,7 @@ import {
 import { TextareaControl, TextControl, PanelBody } from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
 import './editor.scss'
+import { parseDataAttributes } from './data-attributes-parser'
 
 /**
  * Render inspector controls for the HTML Element block.
@@ -15,9 +16,11 @@ import './editor.scss'
  * @param {string} props.tagName The HTML tag name.
  * @param {string} props.anchor The ID of the element.
  * @param {string} props.className The classes of the element.
+ * @param {string} props.dataset The data attributes of the element.
  * @param {Function} props.onChangeTagName onChange function for the tagName TextControl.
  * @param {Function} props.onChangeAnchor onChange function for the ID TextControl.
  * @param {Function} props.onChangeClassName onChange function for the className TextControl.
+ * @param {Function} props.onChangeDataset onChange function for the dataset TextControl.
  *
  * @return {JSX.Element} The control group.
  */
@@ -25,9 +28,11 @@ function EditControls( {
 	tagName,
 	anchor,
 	className,
+	dataset,
 	onChangeTagName,
 	onChangeAnchor,
 	onChangeClassName,
+	onChangeDataset,
 } ) {
 	return (
 		<InspectorControls>
@@ -62,6 +67,15 @@ function EditControls( {
 					value={ className }
 					onChange={ onChangeClassName }
 				/>
+				<TextareaControl
+					label={ __( 'Data Attributes', 'plain-blocks' ) }
+					help={ __(
+						'The data-* attributes to use for this HTML element',
+						'plain-blocks'
+					) }
+					value={ dataset }
+					onChange={ onChangeDataset }
+				/>
 			</PanelBody>
 		</InspectorControls>
 	)
@@ -74,12 +88,19 @@ function EditControls( {
  * @return {Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes, isSelected } ) {
-	const { tagName, anchor, className } = attributes
+	const { tagName, anchor, className, dataset } = attributes
 	const TagName = tagName || 'div'
+
+	const dataAttributes = Object.fromEntries(
+		Object.entries( parseDataAttributes( dataset ) ).map(
+			( [ key, value ] ) => [ `data-${ key }`, value ?? '' ]
+		)
+	)
 
 	const blockProps = useBlockProps( {
 		id: anchor,
 		className,
+		...dataAttributes,
 	} )
 	const innerBlocksProps = useInnerBlocksProps( {
 		...blockProps,
@@ -92,6 +113,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 				tagName={ tagName }
 				anchor={ anchor }
 				className={ className }
+				dataset={ dataset }
 				onChangeTagName={ ( value ) =>
 					setAttributes( { tagName: value || null } )
 				}
@@ -100,6 +122,9 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 				}
 				onChangeClassName={ ( value ) =>
 					setAttributes( { className: value || null } )
+				}
+				onChangeDataset={ ( value ) =>
+					setAttributes( { dataset: value || null } )
 				}
 			/>
 			<TagName { ...innerBlocksProps } />
