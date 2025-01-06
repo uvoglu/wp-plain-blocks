@@ -1,4 +1,5 @@
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor'
+import { parseDataAttributes } from './data-attributes-parser'
 
 /**
  * The save function defines the way in which the different attributes should
@@ -8,11 +9,23 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor'
  * @return {Element} Element to render.
  */
 export default function save( { attributes } ) {
-	const { tagName, anchor, className } = attributes
+	const { tagName, anchor, className, dataset } = attributes
 	const TagName = tagName || 'div'
 
+	const dataAttributes = Object.fromEntries(
+		Object.entries( parseDataAttributes( dataset ) ).map(
+			( [ key, value ] ) => [ `data-${ key }`, value ?? '' ]
+		)
+	)
+
 	return (
-		<TagName { ...useBlockProps.save( { id: anchor, className } ) }>
+		<TagName
+			{ ...useBlockProps.save( {
+				id: anchor,
+				className,
+				...dataAttributes,
+			} ) }
+		>
 			<InnerBlocks.Content />
 		</TagName>
 	)
