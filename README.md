@@ -12,7 +12,7 @@ To generate translations, use the following commands with the [WP-CLI](https://m
 - Do the same for all other languages you want, e.g., `cp languages/plain-blocks.pot languages/plain-blocks-de_CH_informal.po`
 - Edit the translations in `languages/plain-blocks-de.pot` (make sure that for JS files, the file from `./build` is included)
 - `wp i18n make-mo languages`
-- `wp i18n make-json plain-blocks-de.po --no-purge`
+- `wp i18n make-json languages/plain-blocks-de.po --no-purge`
 
 ## Loading Translations
 
