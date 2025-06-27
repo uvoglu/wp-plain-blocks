@@ -1,0 +1,161 @@
+# Copyright (C) 2025 UVOGLU
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Plain Blocks 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-plain-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-06-26T15:25:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: plain-blocks\n"
+
+#. Plugin Name of the plugin
+#: plain-blocks.php
+#: plain-blocks.php:28
+msgid "Plain Blocks"
+msgstr ""
+
+#. Description of the plugin
+#: plain-blocks.php
+msgid "A collection of plain (unstyled) Gutenberg blocks, intended to use in connection with utility CSS classes."
+msgstr "Eine Sammlung von einfachen (ungestylten) Gutenberg-Blöcken, die zur Verwendung in Verbindung mit Utility-CSS-Klassen vorgesehen sind."
+
+#. Author of the plugin
+#: plain-blocks.php
+msgid "UVOGLU"
+msgstr ""
+
+#: build/featured-image/index.js:1
+#: build/hero/index.js:1
+#: build/html-element/index.js:1
+#: src/featured-image/edit.js:171
+#: src/hero/edit.js:169
+#: src/html-element/edit.js:40
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: build/featured-image/index.js:1
+#: build/hero/index.js:1
+#: src/featured-image/edit.js:184
+#: src/featured-image/edit.js:193
+#: src/hero/edit.js:182
+#: src/hero/edit.js:191
+msgid "Resolution"
+msgstr "Auflösung"
+
+#: build/featured-image/index.js:1
+#: build/hero/index.js:1
+#: src/featured-image/edit.js:197
+#: src/hero/edit.js:195
+msgid "Select the size of the source image."
+msgstr "Wähle die Grösse des Quellbildes aus."
+
+#: build/featured-image/index.js:1
+#: build/hero/index.js:1
+#: src/featured-image/edit.js:206
+#: src/featured-image/edit.js:217
+#: src/hero/edit.js:204
+#: src/hero/edit.js:215
+msgid "Focal point"
+msgstr "Fokuspunkt"
+
+#: build/featured-image/index.js:1
+#: src/featured-image/edit.js:275
+msgid "Add a featured image"
+msgstr "Ein Vorschaubild hinzufügen"
+
+#: build/hero/index.js:1
+#: src/hero/edit.js:248
+msgid "Add an image or video"
+msgstr "Ein Bild oder Video hinzufügen"
+
+#: build/hero/index.js:1
+#: src/hero/edit.js:306
+msgid "Replace"
+msgstr "Ersetzen"
+
+#: build/hero/index.js:1
+#: src/hero/edit.js:305
+msgid "Add media"
+msgstr "Medien hinzufügen"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:44
+msgid "Tag"
+msgstr "Tag"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:45
+msgid "The tag name to use for this HTML element"
+msgstr "Der Tag-Name, welcher für dieses HTML Element verwendet wird"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:53
+msgid "ID"
+msgstr "ID"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:54
+msgid "The ID to use for this HTML element"
+msgstr "Die ID, welche für dieses HTML Element verwendet wird"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:62
+msgid "Class"
+msgstr "Klasse"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:63
+msgid "The classes to use for this HTML element"
+msgstr "Die Klasse, welche für dieses HTML Element verwendet wird"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:71
+msgid "Data Attributes"
+msgstr "Data-Attribute"
+
+#: build/html-element/index.js:1
+#: src/html-element/edit.js:72
+msgid "The data-* attributes to use for this HTML element"
+msgstr "Die data-* Attribute, welche für dieses HTML verwendet werden"
+
+#: build/featured-image/block.json
+#: src/featured-image/block.json
+msgctxt "block title"
+msgid "Hero (Featured Image)"
+msgstr "Hero (Vorschaubild)"
+
+#: build/featured-image/block.json
+#: src/featured-image/block.json
+msgctxt "block description"
+msgid "Display a post's featured image as background image."
+msgstr "Zeigt das Vorschaubild von einem Post als Hintergrundbild"
+
+#: build/hero/block.json
+#: src/hero/block.json
+msgctxt "block title"
+msgid "Hero"
+msgstr "Hero"
+
+#: build/hero/block.json
+#: src/hero/block.json
+msgctxt "block description"
+msgid "Display an image or video as a background object."
+msgstr "Zeigt ein Bild oder Video als Hintergrund-Objekt."
+
+#: build/html-element/block.json
+#: src/html-element/block.json
+msgctxt "block title"
+msgid "HTML Element"
+msgstr "HTML Element"
+
+#: build/html-element/block.json
+#: src/html-element/block.json
+msgctxt "block description"
+msgid "A block that allows to create a HTML element as a block."
+msgstr "Ein Block, mit welchem ein HTML Element als Block erstellt werden kann."
